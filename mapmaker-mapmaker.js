@@ -40,7 +40,7 @@ function changeToInitials(names) {
 
     for (let i = 0; i < name.length; i++) {
       if (i === 0 || name[i - 1] === ' ') {
-        initials = name[i];
+        initials += name[i];
       }
     }
 
