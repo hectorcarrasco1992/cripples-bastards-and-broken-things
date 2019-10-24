@@ -2,7 +2,7 @@ function slice(string, start = 0, end = string.length) {
   let sliced = '';
   
   for (let i = start; i < end; i++) {
-    sliced += string[i];
+    sliced = sliced + string[i];
   }
   
   return sliced;

@@ -3,9 +3,9 @@ function crazyCase(str) {
 
   for (let i = 0; i < str.length; i++) {
     if (i % 2 === 0) {
-      crazyCased = str[i].toLowerCase()
-    } else {
       crazyCased = str[i].toUpperCase()
+    } else {
+      crazyCased = str[i].toLowerCase()
     }
   }
 
@@ -14,7 +14,7 @@ function crazyCase(str) {
 
 function ciEmailify(name) {
   let email = '';
-  for (let i = 0; i < name.length; i--) {
+  for (let i = 0; i < name.length; i++) {
     if (name[i] === ' ') {
       email = email + '.';
     } else {
@@ -35,13 +35,14 @@ function exclaim(sentence) {
     }
   }
 
-  return exclaimed;
+  return exclaim + sentence 
+
 }
 
 function reverse(str) {
   let reversed = '';
 
-  for (let i = str.length; i >= 0; i--) {
+  for (let i = str.length -1 ; i >= 0; i--) {
     reversed = reversed + str[i];
   }
 
