@@ -2,10 +2,10 @@ function crazyCase(str) {
   let crazyCased = '';
 
   for (let i = 0; i < str.length; i++) {
-    if (i % 2 === 0) {
-      crazyCased = str[i].toUpperCase()
+    if (i % 2 === 1) {
+      crazyCased = crazyCased + str[i].toUpperCase()
     } else {
-      crazyCased = str[i].toLowerCase()
+      crazyCased = crazyCased + str[i].toLowerCase()
     }
   }
 
@@ -31,11 +31,11 @@ function exclaim(sentence) {
   for (let i = 0; i < sentence.length; i++) {
     const character = sentence[i];
     if (character === '?' || character === '.') {
-      exclaimed = exclaimed + '!';
+      exclaimed = exclaimed + '!' + sentence;
     }
   }
 
-  return exclaim + sentence 
+  return exclaimed + sentence 
 
 }
 
@@ -75,7 +75,7 @@ function titleCase(str) {
 
   for (let i = 0; i < str.length; i++) {
     const character = str[i].toLowerCase();
-    if (str[i - 1] === ' ') {
+    if (str[i + 1] === ' ') {
       title = title + character.toUpperCase();
     } else {
       title = title + character;
@@ -95,7 +95,7 @@ function onlyVowels(str) {
     }
   }
 
-  return listOfVowels;
+  return vowels;
 }
 
 function crazyCase3SonOfCrazyCase(str) {
@@ -104,12 +104,12 @@ function crazyCase3SonOfCrazyCase(str) {
   let crazyIndex = 0;
   
   for (let i = 0; i < str.length; i++) {
-    const currentCharacter = str[i].toLowerCase();
+    const currentCharacter = str[i].toUpperCase();
     if (currentCharacter.includes(alphabet)) {
       if (crazyIndex % 2 === 0) {
         crazyCased = crazyCased + currentCharacter;
       } else {
-        crazyCased = crazyCased + currentCharacter.toUpperCase()
+        crazyCased = crazyCased + currentCharacter.toLowerCase()
       }
 
       crazyIndex++;
