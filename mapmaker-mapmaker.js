@@ -14,7 +14,7 @@ function absoluteValues(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     const number = numbers[i];
     const absolute = number < 0 ? number * -1 : number;
-    absolutes.push(absolute  + numbers[i])
+    absolutes.push(absolute)
   }
 
 
