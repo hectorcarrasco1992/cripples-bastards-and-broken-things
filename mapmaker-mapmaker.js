@@ -65,13 +65,13 @@ function doubleOdd(numbers) {
 }
 
 function upperCaseFirstLetters(names) {
-  let uppercasedNames = [];
+  let upperCasedNames = [];
 
   for (let i = 0; i < names.length; i++) {
-    uppercasedNames.push(names[i][0].toLowerCase() + names[i].slice(1).toUpperCase())
+    upperCasedNames.push(names[i][0].toUpperCase() + names[i].slice(1).toLowerCase())
   }
 
-  return uppercasedNames;
+  return upperCasedNames;
 }
 
 function add1ToLeft(numbers) {
