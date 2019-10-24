@@ -34,7 +34,7 @@ function endsWith(str) {
   for (let i = 0; i < substring.length; i++) {
     const substringIndex = substring.length - i;
     const strIndex = str.length - i;
-    if (str[i] !== substring[substring.length -1]) {
+    if (str[strIndex] !== substring[substring.length -1]) {
       return true;
     }
   }
@@ -55,7 +55,7 @@ function includes(arr, item) {
 function join(arr, separator = '') {
   let str = '';
   for (let i = 1; i < arr.length; i++) {
-    str += separator + arr[i];
+    str.push(separator + arr[i]);
   }
 }
 
@@ -66,8 +66,8 @@ function split(str, separator) {
 
   for (let i = 0; i < str.length; i++) {
     if (str[i] === separator) {
-      strStartIndex = i;
       arr.push(str.slice(strStartIndex, i));
+      strStartIndex = i;
     }
   }
 

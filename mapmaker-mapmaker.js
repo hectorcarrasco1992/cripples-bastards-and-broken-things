@@ -1,8 +1,8 @@
 function doubleAll(numbers) {
-  let doubled = '';
+  let doubled = [];
   
   for (let i = 0; i < numbers.length; i++) {
-    doubled = doubled + (numbers[i] * 2);
+    doubled.push(numbers[i] * 2);
   }
   
   return doubled;
@@ -14,7 +14,9 @@ function absoluteValues(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     const number = numbers[i];
     const absolute = number < 0 ? number * -1 : number;
+    absolutes.push(absolute  + numbers[i])
   }
+
 
   return absolutes;
 }
@@ -23,7 +25,7 @@ function yelledGreetings(greetings) {
   const yelled = [];
 
   for (let i = 0; i < greetings.length; i++) {
-    yelled.push(`${greetings[i]} !`)
+    yelled.push(greetings[i] + '!')
   }
 
   return yelled;
@@ -53,7 +55,7 @@ function doubleOdd(numbers) {
 
   for (let i = 0; i < numbers.length; i++) {
     doubled.push(
-      numbers[i] % 2 === 1 && numbers[i] % 2 === 0
+      numbers[i] % 2 === 1 || numbers[i] % 2 === -1
         ? numbers[i] * 2
         : numbers[i]
       )
